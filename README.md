@@ -19,7 +19,7 @@ https://developers.google.com/maps/documentation/android-sdk/maps-compose
 https://developers.google.com/maps/documentation/android-sdk/config#kotlin
 ### 2.1 Setup Maps SDK
 In the top-level `settings.gradle`, include the Gradle plugin portal, Google Maven repository, and Maven central repository. **Add to the top** before any other statements.
-```json
+```programming
 pluginManagement {  
     repositories {  
         gradlePluginPortal()  
@@ -30,7 +30,7 @@ pluginManagement {
 ```
 
 Also add
-```json
+```programming
 dependencyResolutionManagement {  
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)  
     repositories {  
@@ -44,7 +44,7 @@ dependencyResolutionManagement {
 
 #### Module `build.gradle`
 In the **module** `build.gradle`, add Google Play services dependency
-```json
+```programming
 dependencies {    
 	// Maps SDK for Android    
 	implementation(libs.maps.compose)  
@@ -52,7 +52,7 @@ dependencies {   
 ```
 
 Ensure that **compileSdk is set to 34** or higher and **minSdk is set to 21** or higher.
-```json
+```programming
 android {    
 	compileSdk = 34    
 	defaultConfig {        
@@ -61,7 +61,7 @@ android {   
 }
 ```
 Then add to access metadata values
-```json
+```programming
 android {  // ...  
 	buildFeatures {    
 		buildConfig = true    // ...  
@@ -73,7 +73,7 @@ android {  // ... 
 Store the API Key in a file named `secrets.properties` located on the **root** of your project
 
 In the **top-level** `build.gradle` file add
-```json
+```programming
 buildscript {  
 	dependencies {  
 		classpath("com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1")  
@@ -81,7 +81,7 @@ buildscript {
 }
 ```
 In the **module-level** `build.gradle`file add
-```json
+```programming
 plugins {  
 	id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")  
 }
@@ -101,7 +101,7 @@ Add to `AndroidManifest.xml` in the application
 ```
 
 Add to **module-level** `build.gradle`
-```json
+```programming
 secrets {
     // Optionally specify a different file name containing your secrets.
     // The plugin defaults to "local.properties"
