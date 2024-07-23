@@ -1,5 +1,15 @@
 # MapWorkshop
 
+# Step 1: Google Maps API
+**Go to:** https://developers.google.com/maps/documentation/android-sdk/get-api-key
+- get API key
+- restrict on Android (optional)
+	- com.example.[sample]
+	- Gradle
+		- Window button
+		- gradle signingreport
+		- Get SHA-1
+
 # Setup from GitHub Repo
 Create and open a `secrets.properties` file at the root (same folder as `local.properties`)
 - Add `MAPS_API_KEY=YOUR_API_KEY`
@@ -10,15 +20,6 @@ Go to [Example](#example)
 
 # Setup from Empty View
 https://developers.google.com/maps/documentation/android-sdk/maps-compose
-# Step 1: Google Maps API
-**Go to:** https://developers.google.com/maps/documentation/android-sdk/get-api-key
-- get API key
-- restrict on Android 
-	- com.example.[sample]
-	- Gradle
-		- Window button
-		- gradle signingreport
-		- Get SHA-1
 # Step 2: Add Dependencies
 
 https://developers.google.com/maps/documentation/android-sdk/config#kotlin
