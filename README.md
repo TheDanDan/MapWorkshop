@@ -141,6 +141,7 @@ Add permissions
 
 # Example
 
+Example for a marker at Singapore
 ```kotlin
 val singapore = LatLng(1.35, 103.87)
 val cameraPositionState = rememberCameraPositionState {
@@ -158,4 +159,43 @@ GoogleMap(
 }
 ```
 
+Example for going through a list of locations
+
+```kotlin
+val places = arrayOf(
+                    arrayOf("High Park", "Waterfront park with cherry blossoms"),
+                    arrayOf("Royal Ontario Museum", "Canada's largest and most comprehensive museum"),
+                    arrayOf("CN Tower", "World's tallest freestanding structure until 2007"),
+                    arrayOf("Art Gallery of Ontario", "Free on the first Wednesday night of each month")
+                )
+
+val coordinates = arrayOf(
+                    arrayOf(43.6465, -79.4637),  // High Park
+                    arrayOf(43.6677, -79.3948),  // Royal Ontario Museum
+                    arrayOf(43.6426, -79.3871),  // CN Tower
+                    arrayOf(43.6536, -79.3925)   // Art Gallery of Ontario
+                )
+
+val initialPosition = LatLng(coordinates[0][0], coordinates[0][1])
+val cameraPositionState = rememberCameraPositionState {
+	position = CameraPosition.fromLatLngZoom(initialPosition, 10f)
+}
+
+GoogleMap(
+	modifier = Modifier.fillMaxSize(),
+	cameraPositionState = cameraPositionState
+) {
+	for (i in places.indices) {
+		val position = LatLng(coordinates[i][0], coordinates[i][1])
+		val title = places[i][0]
+		val snippet = places[i][1]
+
+		Marker(
+			state = MarkerState(position = position),
+			title = title,
+			snippet = snippet
+		)
+	}
+}
+```
 
