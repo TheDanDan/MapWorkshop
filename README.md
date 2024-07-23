@@ -1,6 +1,11 @@
 # MapWorkshop
 
 # Setup from GitHub Repo
+Create and open a `secrets.properties` file at the root (same folder as `local.properties`)
+- Add `MAPS_API_KEY=YOUR_API_KEY`
+- Replace `YOUR_API_KEY` with the key
+
+[Template]
 
 
 # Setup from Empty View
@@ -132,3 +137,7 @@ Add permissions
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>  
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
+
+# [Template](#template)
+
+
