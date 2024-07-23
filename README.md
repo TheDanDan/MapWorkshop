@@ -5,7 +5,7 @@ Create and open a `secrets.properties` file at the root (same folder as `local.p
 - Add `MAPS_API_KEY=YOUR_API_KEY`
 - Replace `YOUR_API_KEY` with the key
 
-[Template]
+## [Template]
 
 
 # Setup from Empty View
