@@ -5,7 +5,7 @@ Create and open a `secrets.properties` file at the root (same folder as `local.p
 - Add `MAPS_API_KEY=YOUR_API_KEY`
 - Replace `YOUR_API_KEY` with the key
 
-## [Template]
+Go to [Template](#template)
 
 
 # Setup from Empty View
@@ -138,6 +138,6 @@ Add permissions
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
 
-# [Template](#template)
+# [Template]
 
 
